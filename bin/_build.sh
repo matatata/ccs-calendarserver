@@ -33,7 +33,7 @@ c_macro () {
   local sys_header="$1"; shift;
   local version_macro="$1"; shift;
 
-  local value="$(printf "#include <${sys_header}>\n${version_macro}\n" | cc -x c -E - 2>/dev/null | tail -1)";
+  local value="$(printf "#include <${sys_header}>\n${version_macro}\n" | cc -x c -E "$CPPFLAGS" - 2>/dev/null | tail -1)";
 
   if [ "${value}" = "${version_macro}" ]; then
     # Macro was not replaced
