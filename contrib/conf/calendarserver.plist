@@ -189,6 +189,12 @@
         A variety of directory services are available for use.
       -->
 
+    <key>DirectoryProxy</key>
+    <dict>
+      <key>Enabled</key>
+      <true/>
+    </dict>
+
     <!-- Open Directory Service (Mac OS X) -->
     <key>DirectoryService</key>
     <dict>
@@ -206,6 +212,21 @@
         </array>
       </dict>
     </dict>
+
+    <!-- XML File Directory Service -->
+    <!--
+    <key>DirectoryService</key>
+    <dict>
+      <key>type</key>
+      <string>xml</string>
+
+      <key>params</key>
+      <dict>
+        <key>xmlFile</key>
+        <string>/Users/calendarserver/CalendarServer/conf/accounts.xml</string>
+      </dict>
+    </dict>
+    -->
 
     <!-- XML File Augment Service -->
     <key>AugmentService</key>
@@ -301,6 +322,13 @@
     <!-- Log levels -->
     <key>DefaultLogLevel</key>
     <string>warn</string> <!-- debug, info, warn, error -->
+
+    <!-- Log level overrides for specific functionality -->
+    <key>LogLevels</key>
+    <dict>
+      <key>txdav.caldav.datastore.scheduling</key>
+      <string>info</string>
+    </dict>
 
     <!-- Server process ID file -->
     <key>PIDFile</key>
