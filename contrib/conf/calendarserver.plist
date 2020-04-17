@@ -105,7 +105,8 @@
 
     <!-- Server root, overridden by /Library/Server/Preferences/Calendar.plist -->
     <key>ServerRoot</key>
-    <string>/Library/Server/Calendar and Contacts</string>
+    <!--<string>/Library/Server/Calendar and Contacts</string>-->
+    <string>/Users/calendarserver/CalendarServer</string>
 
     <!-- No features - when macOS supports postgres 9.5 and up change
          this to include 'skip-locked'. -->
@@ -264,7 +265,7 @@
       <key>Digest</key>
       <dict>
         <key>Enabled</key>
-        <true/>
+        <true/><!-- Hint: Disable to allow simple ldap authentication  -->
         <key>Algorithm</key>
         <string>md5</string>
         <key>Qop</key>
